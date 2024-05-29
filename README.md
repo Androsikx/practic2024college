@@ -1,14 +1,16 @@
 # practic2024college
-Сайт для коледжу, клінінгова компанія, Головні ідеї:
+Website for college, cleaning company, Main ideas:
 
-Головна сторінка: З коротким описом послуг компанії, контактною інформацією і, можливо, формою для швидкого запиту.
+Home page: With a brief description of the company's services, contact information, and possibly a form for a quick inquiry.
 
-Послуги: Сторінка, що детально описує всі доступні послуги: прибирання офісів, квартир, після ремонту тощо.
+Services: A page that describes in detail all the available services: cleaning of offices, apartments, after renovation, etc.
 
-Про нас: Інформація про компанію, її історія, команда, філософія роботи.
+About us: Information about the company, its history, team, and work philosophy.
 
-Портфоліо або відгуки: Фото робіт або відгуки клієнтів, які підтверджують якість послуг.
+Portfolio or testimonials: Photos of works or customer reviews that confirm the quality of services.
 
-Контакти: Адреса, телефон, електронна пошта, можливо, інтерактивна карта.
+Contacts: Address, phone number, email, possibly an interactive map.
 
-Форма запиту на послугу: Для зручності клієнтів, щоб швидко замовити прибирання.
+Service request form: For the convenience of customers to quickly order cleaning.
+
+Translated with DeepL.com (free version)
