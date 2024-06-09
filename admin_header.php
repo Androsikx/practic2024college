@@ -1,9 +1,11 @@
 <?php
+session_start(); // Починаємо сесію на кожній сторінці, яка використовує header
+
 // Підключення до бази даних
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbname = "clining";
+$dbname = "cleaning_company";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -26,9 +28,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Адмінка - Список замовлень</h1>
-    </header>
+    <?php include('admin_header.php'); ?> <!-- Включаємо новий header -->
     
     <div class="container">
         <section>

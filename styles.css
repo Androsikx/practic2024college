@@ -1,0 +1,102 @@
+/* css/styles.css */
+
+/* Загальні стилі */
+body {
+    font-family: Sagona, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 90px; /* Більш заокруглені кути для заголовка */
+    max-width: 800px; /* Ширина заголовка для кращого центрування */
+    margin: auto;
+    margin-bottom: 20px; /* Відступ знизу заголовка */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопок */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Посилена тінь при наведенні */
+}
+
+nav ul li a.active {
+    background-color: #45a049;
+}
+
+.container {
+    max-width: 800px; /* Ширина контейнера */
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.container section {
+    background-color: #45a049; /* Зелений колір для фону секції */
+    padding: 20px;
+    border-radius: 50px; /* Заокруглені кути для секцій */
+    margin-bottom: 20px; /* Відступ між секціями */
+}
+
+.contact-gif {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 100%; /* Встановлюємо ширину 100% */
+    max-width: 100px; /* Максимальна ширина GIF */
+    height: auto; /* Зберігаємо пропорції зображення */
+}
+.contact-gif1 {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 100%; /* Встановлюємо ширину 100% */
+    max-width: 100px; /* Максимальна ширина GIF */
+    height: auto; /* Зберігаємо пропорції зображення */
+}
+.contact-gif2 {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    width: 100%; /* Встановлюємо ширину 100% */
+    max-width: 100px; /* Максимальна ширина GIF */
+    height: auto; /* Зберігаємо пропорції зображення */
+}
+footer {
+    background-color: #388e3c; /* Зелений колір для фону нижнього блоку */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 13%; /* Заокруглені кути нижнього блоку */
+}

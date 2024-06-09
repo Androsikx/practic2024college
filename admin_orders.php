@@ -28,6 +28,12 @@ $result = $conn->query($sql);
 <body>
     <header>
         <h1>Адмінка - Список замовлень</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.php">Назад до головної</a></li>
+                <li><a href="admin_users.php">Користувачі</a></li>
+            </ul>
+        </nav>
     </header>
     
     <div class="container">

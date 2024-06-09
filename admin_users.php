@@ -11,8 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Запит до бази даних для отримання списку замовлень
-$sql = "SELECT * FROM orders";
+// Запит до бази даних для отримання списку користувачів
+$sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 
 ?>
@@ -22,38 +22,42 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Адмінка - Список замовлень</title>
+    <title>Адмінка - Список користувачів</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Адмінка - Список замовлень</h1>
+        <h1>Адмінка - Список користувачів</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.php">Назад до головної</a></li>
+                <li><a href="admin_orders.php">Замовлення</a></li>
+            </ul>
+        </nav>
     </header>
     
     <div class="container">
         <section>
-            <h2>Список замовлень</h2>
+            <h2>Список користувачів</h2>
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Ім'я клієнта</th>
-                    <th>Послуга</th>
-                    <th>Статус</th>
-                    <th>Дії</th>
+                    <th>Ім'я</th>
+                    <th>Email</th>
+                    <th>Роль</th>
                 </tr>
                 <?php
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $row["id"] . "</td>";
-                        echo "<td>" . $row["client_name"] . "</td>";
-                        echo "<td>" . $row["service"] . "</td>";
-                        echo "<td>" . $row["status"] . "</td>";
-                        echo '<td><a href="confirm.php?id=' . $row["id"] . '">Підтвердити</a> | <a href="reject.php?id=' . $row["id"] . '">Відмовити</a> | <a href="process.php?id=' . $row["id"] . '">В обробці</a></td>';
+                        echo "<td>" . $row["username"] . "</td>";
+                        echo "<td>" . $row["email"] . "</td>";
+                        echo "<td>" . $row["role"] . "</td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='5'>Немає замовлень</td></tr>";
+                    echo "<tr><td colspan='4'>Немає користувачів</td></tr>";
                 }
                 $conn->close();
                 ?>
