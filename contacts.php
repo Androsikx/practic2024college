@@ -33,9 +33,5 @@
             <img src="123.gif" alt="Контакти GIF" class="contact-gif">
         </section>
     </div>
-
-    <footer>
-        <p>Клінінгова компанія &copy; 2024. Всі права захищені.</p>
-    </footer>
 </body>
 </html>

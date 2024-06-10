@@ -1,11 +1,9 @@
-/* css/styles.css */
-
-/* Загальні стилі */
 body {
-    font-family: Sagona, sans-serif;
+    font-family: 'Sagona', sans-serif;
     margin: 0;
     padding: 0;
     background-color: aliceblue;
+    font-size: 16px;
 }
 
 header {
@@ -13,10 +11,13 @@ header {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    border-radius: 90px; /* Більш заокруглені кути для заголовка */
-    max-width: 800px; /* Ширина заголовка для кращого центрування */
+    border-radius: 90px; 
+    max-width: 800px; 
     margin: auto;
-    margin-bottom: 20px; /* Відступ знизу заголовка */
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -37,14 +38,14 @@ nav ul li a {
     color: #fff;
     background-color: #4CAF50;
     border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для кнопок */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #45a049;
-    transform: scale(1.05); /* Збільшуємо кнопку при наведенні */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Посилена тінь при наведенні */
+    transform: scale(1.05); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
 }
 
 nav ul li a.active {
@@ -52,51 +53,67 @@ nav ul li a.active {
 }
 
 .container {
-    max-width: 800px; /* Ширина контейнера */
+    max-width: 800px; 
     margin: auto;
     padding: 2rem;
-    text-align: center;
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .container section {
-    background-color: #45a049; /* Зелений колір для фону секції */
+    background-color: #45a049; 
     padding: 20px;
-    border-radius: 50px; /* Заокруглені кути для секцій */
-    margin-bottom: 20px; /* Відступ між секціями */
+    border-radius: 50px; 
+    margin-bottom: 20px; 
+    flex: 1;
 }
 
-.contact-gif {
-    display: block;
-    margin: 20px auto;
+.container aside {
+    margin-left: 20px;
+    flex: 0.5;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 20px;
-    width: 100%; /* Встановлюємо ширину 100% */
-    max-width: 100px; /* Максимальна ширина GIF */
-    height: auto; /* Зберігаємо пропорції зображення */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.contact-gif1 {
-    display: block;
-    margin: 20px auto;
+
+#calendar {
+    background-color: #fff;
     border-radius: 20px;
-    width: 100%; /* Встановлюємо ширину 100% */
-    max-width: 100px; /* Максимальна ширина GIF */
-    height: auto; /* Зберігаємо пропорції зображення */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.contact-gif2 {
-    display: block;
-    margin: 20px auto;
-    border-radius: 20px;
-    width: 100%; /* Встановлюємо ширину 100% */
-    max-width: 100px; /* Максимальна ширина GIF */
-    height: auto; /* Зберігаємо пропорції зображення */
-}
-footer {
-    background-color: #388e3c; /* Зелений колір для фону нижнього блоку */
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
+
+#calendar table {
     width: 100%;
-    border-radius: 13%; /* Заокруглені кути нижнього блоку */
+    border-collapse: collapse;
+}
+
+#calendar th, #calendar td {
+    padding: 10px;
+    text-align: center;
+}
+
+#calendar th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+#calendar td {
+    border: 1px solid #ccc;
+}
+
+#calendar td:hover {
+    background-color: #f0f0f0;
+}
+
+.contact-gif, .contact-gif1, .contact-gif2 {
+    display: block;
+    margin: 20px auto;
+    width: 100%; 
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 20px;
 }

@@ -1,8 +1,7 @@
 <?php
-// Підключення до бази даних
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "";
 $dbname = "clining";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,6 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 
 // Запит до бази даних для отримання списку замовлень
 $sql = "SELECT * FROM orders";
@@ -60,9 +60,5 @@ $result = $conn->query($sql);
             </table>
         </section>
     </div>
-
-    <footer>
-        <p>Клінінгова компанія &copy; 2024. Всі права захищені.</p>
-    </footer>
 </body>
 </html>

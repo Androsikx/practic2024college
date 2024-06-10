@@ -1,11 +1,9 @@
 <?php
-session_start(); // Починаємо сесію на кожній сторінці, яка використовує header
-
 // Підключення до бази даних
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "cleaning_company";
+$username = "root";
+$password = "";
+$dbname = "clining";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -61,8 +59,5 @@ $result = $conn->query($sql);
         </section>
     </div>
 
-    <footer>
-        <p>Клінінгова компанія &copy; 2024. Всі права захищені.</p>
-    </footer>
 </body>
 </html>

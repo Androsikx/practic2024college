@@ -13,4 +13,3 @@ Contacts: Address, phone number, email, possibly an interactive map.
 
 Service request form: For the convenience of customers to quickly order cleaning.
 
-Translated with DeepL.com (free version)

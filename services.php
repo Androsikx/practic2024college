@@ -32,8 +32,5 @@
         </section>
     </div>
 
-    <footer>
-        <p>Клінінгова компанія &copy; 2024. Всі права захищені.</p>
-    </footer>
 </body>
 </html>

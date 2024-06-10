@@ -25,10 +25,12 @@
             <p>Короткий опис послуг компанії тут...</p>
             <p>Контактна інформація та форма для швидкого запиту тут...</p>
         </section>
+        <aside class="calendar">
+            <h2>Календар замовлень</h2>
+            <div id="calendar"></div>
+        </aside>
     </div>
 
-    <footer>
-        <p>Клінінгова компанія &copy; 2024. Всі права захищені.</p>
-    </footer>
+    <script src="calendar.js"></script>
 </body>
 </html>

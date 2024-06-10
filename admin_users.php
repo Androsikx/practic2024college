@@ -1,8 +1,8 @@
 <?php
 // Підключення до бази даних
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "";
 $dbname = "clining";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,10 +11,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+require 'db_connection.php';
+
 // Запит до бази даних для отримання списку користувачів
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
-
 ?>
 
 <!DOCTYPE html>
@@ -23,15 +24,15 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адмінка - Список користувачів</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <h1>Адмінка - Список користувачів</h1>
         <nav>
             <ul>
-                <li><a href="admin.php">Назад до головної</a></li>
                 <li><a href="admin_orders.php">Замовлення</a></li>
+                <li><a href="admin_users.php" class="active">Користувачі</a></li>
             </ul>
         </nav>
     </header>
@@ -42,9 +43,10 @@ $result = $conn->query($sql);
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Ім'я</th>
+                    <th>Ім'я користувача</th>
                     <th>Email</th>
                     <th>Роль</th>
+                    <th>Дії</th>
                 </tr>
                 <?php
                 if ($result->num_rows > 0) {
@@ -54,10 +56,11 @@ $result = $conn->query($sql);
                         echo "<td>" . $row["username"] . "</td>";
                         echo "<td>" . $row["email"] . "</td>";
                         echo "<td>" . $row["role"] . "</td>";
+                        echo '<td><a href="edit_user.php?id=' . $row["id"] . '">Редагувати</a> | <a href="delete_user.php?id=' . $row["id"] . '">Видалити</a></td>';
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='4'>Немає користувачів</td></tr>";
+                    echo "<tr><td colspan='5'>Немає користувачів</td></tr>";
                 }
                 $conn->close();
                 ?>
