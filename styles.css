@@ -105,6 +105,11 @@ nav ul li a.active {
     border: 1px solid #ccc;
 }
 
+#calendar td.busy {
+    background-color: #ff6f61;
+    color: white;
+}
+
 #calendar td:hover {
     background-color: #f0f0f0;
 }
