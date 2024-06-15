@@ -18,7 +18,7 @@
             <label for="service">Послуга:</label>
             <select id="service" name="service_id" required>
                 <?php
-                // Підключення до бази даних
+                
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -29,11 +29,11 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-                // SQL-запит для отримання списку послуг
+             
                 $sql = "SELECT * FROM services";
                 $result = $conn->query($sql);
 
-                // Виведення випадаючого списку з послугами
+                
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                         echo '<option value="' . $row['id'] . '">' . $row['service_name'] . ' - ' . $row['price'] . ' грн, ' . $row['execution_time'] . '</option>';
