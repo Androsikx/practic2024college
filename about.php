@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Про нас | Клінінгова компанія</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
     <header>
@@ -29,11 +29,6 @@
 
             <p></p>
         </section>
-        <div>
-        <section>
-        <img src="12345.gif" alt="Контакти GIF" class="contact-gif2">
-</section>
-</div>
     </div>
 </body>
 </html>
