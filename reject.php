@@ -3,14 +3,14 @@
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $orderId = $_GET['id'];
 
-   
+  
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "clining";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-   
+ 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }

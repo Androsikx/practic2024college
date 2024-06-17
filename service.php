@@ -18,7 +18,7 @@
             <label for="service">Послуга:</label>
             <select id="service" name="service_id" required>
                 <?php
-                
+   
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -29,7 +29,7 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
 
-             
+                
                 $sql = "SELECT * FROM services";
                 $result = $conn->query($sql);
 
