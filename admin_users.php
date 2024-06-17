@@ -1,5 +1,5 @@
 <?php
-
+// Підключення до бази даних
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 
 require 'db_connection.php';
 
-
+// Запит до бази даних для отримання списку користувачів
 $sql = "SELECT * FROM users";
 $result = $conn->query($sql);
 ?>
