@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
+// Видалення замовлення, якщо передано параметр id у запиті GET
 if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql_delete = "DELETE FROM orders WHERE id = $id";
@@ -24,7 +24,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id']))
     }
 }
 
-
+// Запит до бази даних для отримання списку замовлень
 $sql = "SELECT * FROM orders";
 $result = $conn->query($sql);
 
@@ -41,6 +41,12 @@ $result = $conn->query($sql);
 <body>
     <header>
         <h1>Адмінка - Список замовлень</h1>
+        <nav>
+            <ul>
+                <li><a href="admin.php"class="active">Головна</a></li>
+                <li><a href="upload.php">Завантажити Зображення</a></li>
+            </ul>
+        </nav>
     </header>
     
     <div class="container">
