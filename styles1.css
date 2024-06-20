@@ -1,3 +1,4 @@
+/* Основні стилі */
 body {
     font-family: 'Sagona', sans-serif;
     margin: 0;
@@ -19,9 +20,11 @@ header {
     display: flex;
     align-items: center;
 }
+
 header h1 {
-margin-left: 10px;
+    margin-left: 10px;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -41,46 +44,80 @@ nav ul li a {
     color: #fff;
     background-color: #5593f0;
     border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #467bc9;
-    transform: scale(1.05); 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li a.active {
     background-color: #5593f0;
 }
 
+/* Стилі для форми замовлення */
 .container {
-    max-width: 800px; 
+    max-width: 600px;
     margin: auto;
     padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.container section {
-    background-color: #5593f0; 
-    padding: 20px;
-    border-radius: 50px; 
-    margin-bottom: 20px; 
-    flex: 1;
-}
-
-.container aside {
-    margin-left: 20px;
-    flex: 0.5;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+    background-color: #5593f0;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #467bc9;
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    background-color: #3c6aaf;
+}
+
+/* Інші стилі для існуючих компонентів */
 .service {
     background-color: #f9f9f9;
     padding: 20px;
@@ -94,8 +131,9 @@ nav ul li a.active {
     color: #000000;
     font-weight: 600;
 }
-.container .service p{
-    color:black;
+
+.container .service p {
+    color: black;
 }
 
 #calendar {
@@ -110,7 +148,8 @@ nav ul li a.active {
     border-collapse: collapse;
 }
 
-#calendar th, #calendar td {
+#calendar th,
+#calendar td {
     padding: 10px;
     text-align: center;
 }
@@ -134,31 +173,38 @@ nav ul li a.active {
     background-color: #f0f0f0;
 }
 
-.contact-gif, .contact-gif1, .contact-gif2 {
+.contact-gif,
+.contact-gif1,
+.contact-gif2 {
     display: block;
     margin: 20px auto;
-    width: 100%; 
-    max-width: 100px; 
-    height: auto; 
+    width: 100%;
+    max-width: 100px;
+    height: auto;
     border-radius: 20px;
 }
 
-.container section h2{
-   color: white;
+.container section h2 {
+    color: white;
 }
-.container section p{
+
+.container section p {
     color: white;
     font-size: 20px;
- }
-.container th{
+}
+
+.container th {
     color: white;
 }
-.container tr{
+
+.container tr {
     color: white;
 }
-.container td{
+
+.container td {
     color: black;
 }
+
 .about {
     background-color: #f9f9f9;
     padding: 20px;
@@ -172,28 +218,46 @@ nav ul li a.active {
     color: #000000;
     font-weight: 600;
 }
-.container .about p{
-    color:black;
+
+.container .about p {
+    color: black;
 }
-.container .about h2{
+
+.container .about h2 {
     color: white;
 }
+
 .carousel div img {
     width: 300px;
     height: center;
 }
+
 .carousel {
-    max-width: 800px; 
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .slick-slide img {
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
-.container .contact p{
-    color:#ffffff;
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.container .contact h3{
-    color:#f0f0f0;
+
+.container .contact p {
+    color: #000000;
+}
+
+.container .contact h3 {
+    color: #000000;
+}
+
+.container .contact h2 {
+    color: #000000;
 }
